@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYCITY - Pune</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Pune Skyline Hero Section */
+        .hero-section { 
+            /* Fallback: Deep Purple/Blue Gradient if image is blocked */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://upload.wikimedia.org/wikipedia/commons/b/bd/Kharadi_Skyline.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; 
+            padding: 130px 0; 
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* Landmark specific styling */
+        .shaniwar-wada { color: #dc3545; font-family: 'Georgia', serif; font-weight: bold; }
+        .aga-khan { color: #0d6efd; font-family: 'Verdana', sans-serif; font-style: italic; }
+        .sinhagad { color: #198754; font-family: 'Courier New', monospace; text-transform: uppercase; }
+
+        .card { border: none; border-radius: 12px; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.15)!important; }
+        
+        footer { background: #212529; color: #adb5bd; padding: 25px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">CityExplore</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#landmarks">Landmarks</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-1 fw-bold mb-0">PUNE</h1>
+            <p class="lead fs-3">The Oxford of the East</p>
+        </div>
+    </header>
+
+    <main class="container my-5" id="landmarks">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body p-4">
+                        <h3 class="shaniwar-wada mb-3">Shaniwar Wada</h3>
+                        <p class="text-muted small">The historic seat of the Peshwas of the Maratha Empire.</p>
+                        <button class="btn btn-danger w-100" onclick="alert('Shaniwar Wada: A 13-story palace fort of the Peshwas built in 1732.')">Show Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body p-4">
+                        <h3 class="aga-khan mb-3">Aga Khan Palace</h3>
+                        <p class="text-muted small">Majestic Italian architecture and a monument of Indian history.</p>
+                        <button class="btn btn-primary w-100" onclick="alert('Aga Khan Palace: Built in 1892, this palace served as a prison for Gandhi.')">Show Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <div class="card-body p-4">
+                        <h3 class="sinhagad mb-3">Sinhagad Fort</h3>
+                        <p class="text-muted small">Famous hill fortress offering a stunning panoramic view.</p>
+                        <button class="btn btn-success w-100" onclick="alert('Sinhagad Fort: An ancient hill fortress popular for trekking and local cuisine.')">Show Info</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">MyCity Pune Guide &copy; 2026 | Practical Assignment</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

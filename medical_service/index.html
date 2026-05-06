@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Medical Emergency Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* Choose background colors and text colors as per need */
+        body { background-color: #fdfdfd; font-family: 'Segoe UI', sans-serif; }
+        .emergency-header { background-color: #dc3545; color: white; padding: 60px 0; }
+        
+        /* Service Cards Styling */
+        .service-card { 
+            border: none; 
+            border-top: 5px solid #dc3545; 
+            transition: 0.3s; 
+            background: #fff;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .service-icon { font-size: 3rem; color: #dc3545; margin-bottom: 15px; }
+
+        footer { background: #343a40; color: #ced4da; padding: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-plus-circle-fill me-2"></i>CityMed Response</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Emergency Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="emergency-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-uppercase">24/7 Medical Emergency Services</h1>
+            <p class="lead">Your safety and health are our top priorities in the city.</p>
+        </div>
+    </header>
+
+    <main class="container my-5" id="services">
+        <h2 class="text-center mb-5">Our Critical Services</h2>
+        <div class="row g-4 text-center">
+            
+            <div class="col-md-4">
+                <div class="card service-card shadow-sm h-100 p-4">
+                    <div class="card-body">
+                        <i class="bi bi-truck-flatbed service-icon"></i>
+                        <h4 class="card-title">Ambulance</h4>
+                        <p class="text-muted">Swift and equipped emergency transport available 24/7 across the city.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card shadow-sm h-100 p-4">
+                    <div class="card-body">
+                        <i class="bi bi-droplet-half service-icon"></i>
+                        <h4 class="card-title">Blood Bank</h4>
+                        <p class="text-muted">Immediate access to blood reserves and rare groups for urgent surgeries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card service-card shadow-sm h-100 p-4">
+                    <div class="card-body">
+                        <i class="bi bi-hospital service-icon"></i>
+                        <h4 class="card-title">ICU Support</h4>
+                        <p class="text-muted">Advanced critical care units with specialized medical staff on standby.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5" id="contact">
+            <button class="btn btn-danger btn-lg px-5 shadow" onclick="window.location.href='#'; alert('Redirecting to Contact Us page...')">
+                <i class="bi bi-telephone-outbound me-2"></i>Contact Us Now
+            </button>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 City Emergency Medical Portal | Emergency Toll-Free: 108</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

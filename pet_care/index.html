@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Claws Pet Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* Choose background colors and text colors as per need */
+        body { background-color: #fffaf0; color: #4a3728; font-family: 'Segoe UI', sans-serif; }
+        
+        .navbar { background-color: #6d4c41 !important; }
+        
+        .hero-section { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        /* Display services using symbols */
+        .service-icon { 
+            font-size: 3.5rem; 
+            color: #d84315; 
+            background: #ffebe5;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .card { border: none; border-radius: 20px; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+        footer { background: #3e2723; color: #efebe9; padding: 30px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-paw-fill me-2"></i>Paws & Claws</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Premium Pet Care Services</h1>
+            <p class="lead fs-4">Because your best friend deserves the best care.</p>
+        </div>
+    </header>
+
+    <main class="container my-5" id="services">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card p-4 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="service-icon"><i class="bi bi-scissors"></i></div>
+                        <h4 class="fw-bold">Grooming</h4>
+                        <p class="text-muted">Professional hair trimming, bathing, and nail care for all breeds.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="service-icon"><i class="bi bi-house-heart"></i></div>
+                        <h4 class="fw-bold">Boarding</h4>
+                        <p class="text-muted">A comfortable home-away-from-home with 24/7 supervision and play.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <h4 class="fw-bold">Vet Checkup</h4>
+                        <p class="text-muted">Regular health screenings and vaccinations by certified experts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5" id="contact">
+            <button class="btn btn-lg btn-warning px-5 py-3 fw-bold rounded-pill shadow" onclick="alert('Opening Contact Us page...')">
+                BOOK AN APPOINTMENT
+            </button>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">Follow us on Social Media</p>
+            <div class="mb-3">
+                <i class="bi bi-instagram mx-2 fs-4"></i>
+                <i class="bi bi-facebook mx-2 fs-4"></i>
+                <i class="bi bi-twitter mx-2 fs-4"></i>
+            </div>
+            <p class="small mb-0">&copy; 2026 Paws & Claws Pet Care | All Rights Reserved [cite: 27]</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

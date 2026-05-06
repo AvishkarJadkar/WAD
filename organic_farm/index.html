@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenRoot Organic Farm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* Choose background colors and text colors as per need */
+        body { background-color: #f9fbf9; color: #2d3436; font-family: 'Segoe UI', sans-serif; }
+        
+        .navbar { background-color: #2d6a4f !important; }
+        
+        /* Header section */
+        .farm-header { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=2000&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 100px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .product-card { border: none; border-radius: 15px; overflow: hidden; transition: 0.3s; }
+        .product-card:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card-img-top { height: 200px; object-fit: cover; }
+
+        /* Footer section */
+        footer { background: #1b4332; color: #d8f3dc; padding: 25px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-leaf me-2"></i>GreenRoot Farm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="farm-header text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">100% ORGANIC FARM</h1>
+            <p class="lead fs-4">Fresh from our fields to your table.</p>
+        </div>
+    </header>
+
+    <main class="container my-5" id="products">
+        <h2 class="text-center mb-5 fw-light">Our Organic Produce</h2>
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Vegetables">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Fresh Vegetables</h4>
+                        <p class="text-muted small">Pesticide-free seasonal greens and root vegetables.</p>
+                        <button class="btn btn-success w-100 mt-2" onclick="showOffers('Vegetables', '20% OFF on Monthly Baskets! Charges: ₹500/week')">
+                            View Offers & Charges
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Fruits">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Organic Fruits</h4>
+                        <p class="text-muted small">Naturally ripened fruits delivered fresh every morning.</p>
+                        <button class="btn btn-success w-100 mt-2" onclick="showOffers('Fruits', 'Buy 2kg Get 500g Free! Charges: Seasonal Pricing')">
+                            View Offers & Charges
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card product-card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Dairy">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Farm Dairy</h4>
+                        <p class="text-muted small">Pure organic milk and handmade butter from grass-fed cows.</p>
+                        <button class="btn btn-success w-100 mt-2" onclick="showOffers('Dairy', 'Subscription Discount: 10% OFF! Charges: ₹80/Litre')">
+                            View Offers & Charges
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 GreenRoot Organic Farm | Eat Healthy, Live Better</p>
+        </div>
+    </footer>
+
+    <script>
+        function showOffers(category, info) {
+            alert(category + " - " + info);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
