@@ -1,0 +1,68 @@
+:root {
+    --sppu-maroon: #800000;
+    --sppu-gold: #ffd700;
+    --bg-light: #f4f7f6;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+}
+
+.bg-sppu {
+    background-color: var(--sppu-maroon) !important;
+}
+
+.header-banner {
+    height: 400px;
+    background: linear-gradient(rgba(128, 0, 0, 0.85), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1541339907198-e08759dfeb3f?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-img {
+    height: 100px;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: var(--sppu-maroon);
+    border-bottom: 3px solid var(--sppu-gold);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+.subject-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-it {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid var(--sppu-maroon);
+    font-weight: bold;
+}
+
+.btn-details {
+    background-color: var(--sppu-maroon);
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #550000;
+    color: var(--sppu-gold);
+}
