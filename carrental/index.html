@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveCity | Premium Car Rentals</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__fadeInLeft" href="#">DRIVE<span>CITY</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#fleet">Our Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers">Special Offers</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-4 ms-lg-3" href="#offers">Book
+                            Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero-section d-flex align-items-center text-white">
+        <div class="container text-center animate__animated animate__fadeIn">
+            <h1 class="display-2 fw-bold mb-3">Your Journey, Your Way</h1>
+            <p class="lead mb-4">Premium car rentals starting from just ₹1,999/day.</p>
+            <a href="#fleet" class="btn btn-outline-light btn-lg">Explore Fleet</a>
+        </div>
+    </header>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold section-title">Featured Fleet</h2>
+        <div class="row g-4">
+            <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <div class="car-card p-3 shadow-sm border-0 bg-white rounded-3">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80"
+                        class="img-fluid rounded mb-3" alt="Sports Car">
+                    <h4>Luxury Sedan</h4>
+                    <p class="text-muted">Automatic • AC • 5 Seats</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <div class="car-card p-3 shadow-sm border-0 bg-white rounded-3">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=500&q=80"
+                        class="img-fluid rounded mb-3" alt="SUV">
+                    <h4>Adventure SUV</h4>
+                    <p class="text-muted">Manual • 4x4 • 7 Seats</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                <div class="car-card p-3 shadow-sm border-0 bg-white rounded-3">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=500&q=80"
+                        class="img-fluid rounded mb-3" alt="Compact">
+                    <h4>City Compact</h4>
+                    <p class="text-muted">Automatic • Electric • 4 Seats</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Offers Section -->
+    <section id="offers" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Compare Offers & Charges</h2>
+            <div class="btn-group mb-5 shadow-sm" role="group">
+                <button type="button" class="btn btn-dark px-4" onclick="displayOffer('standard')">Daily Rate</button>
+                <button type="button" class="btn btn-dark px-4" onclick="displayOffer('weekend')">Weekend Deal</button>
+                <button type="button" class="btn btn-dark px-4" onclick="displayOffer('monthly')">Monthly
+                    Subscription</button>
+            </div>
+
+            <div id="offerDisplay" class="row justify-content-center">
+                <!-- Data injected via JS -->
+                <div class="col-md-6">
+                    <div class="card p-5 border-0 shadow-sm animate__animated animate__zoomIn">
+                        <p class="text-muted">Click a button above to view our transparent pricing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container text-center">
+            <h4 class="text-primary mb-4">DRIVE CITY</h4>
+            <div class="row mb-4">
+                <div class="col-md-4">📍 Pune, Maharashtra</div>
+                <div class="col-md-4">📞 +91 98765 43210</div>
+                <div class="col-md-4">✉️ bookings@drivecity.in</div>
+            </div>
+            <hr class="border-secondary">
+            <p class="small text-muted">&copy; 2026 DriveCity Car Rentals. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
