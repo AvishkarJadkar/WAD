@@ -1,0 +1,38 @@
+<div class="profile-container" *ngIf="authService.currentUser$ | async as user">
+  <div class="profile-card glass-card">
+    <div class="profile-header">
+      <div class="avatar">{{ user.username.charAt(0).toUpperCase() }}</div>
+      <h1>User Profile</h1>
+      <p class="email">{{ user.email }}</p>
+    </div>
+
+    <div class="profile-content">
+      <div class="info-group">
+        <label>Username</label>
+        <p>{{ user.username }}</p>
+      </div>
+
+      <div class="info-group">
+        <label>Email</label>
+        <p>{{ user.email }}</p>
+      </div>
+
+      <div class="info-group">
+        <label>Status</label>
+        <p class="status-active">Active</p>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button (click)="onLogout()" class="btn-logout-full">Logout from Account</button>
+    </div>
+  </div>
+</div>
+
+<div class="no-access" *ngIf="!(authService.currentUser$ | async)">
+  <div class="glass-card error-card">
+    <h2>Access Denied</h2>
+    <p>Please login to view your profile.</p>
+    <a routerLink="/login" class="btn-primary">Go to Login</a>
+  </div>
+</div>

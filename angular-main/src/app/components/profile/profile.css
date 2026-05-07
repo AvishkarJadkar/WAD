@@ -1,0 +1,96 @@
+.profile-container, .no-access {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: calc(100vh - 100px);
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 4rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.email {
+  color: var(--text-muted);
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-group label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.info-group p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.status-active {
+  color: var(--success);
+}
+
+.profile-actions {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.btn-logout-full {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border: 1px solid var(--error);
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-logout-full:hover {
+  background: var(--error);
+  color: white;
+}
+
+.error-card {
+  padding: 3rem;
+  text-align: center;
+}
+
+.error-card h2 {
+  color: var(--error);
+  margin-bottom: 1rem;
+}
+
+.error-card p {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
