@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYCITY - Pune</title>
+    <title>Pune | The Editorial Collection</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Premium Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Work+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <!-- Minimalist Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top nav-transparent" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">CityExplore</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#landmarks">Landmarks</a></li>
+            <a class="navbar-brand" href="#">PNE<span>.</span></a>
+            <div class="d-flex align-items-center">
+                <span class="nav-status d-none d-md-inline me-4">Maharashtra, India</span>
+                <button class="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto mt-4 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#landmarks">Heritage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Story</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-1 fw-bold mb-0">PUNE</h1>
-            <p class="lead fs-3">The Oxford of the East</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+            <div class="hero-content">
+                <h1 class="display-1">The Oxford <br><em>of the</em> East.</h1>
+                <p class="hero-sub">Exploring the intersections of heritage and modernity in Pune.</p>
+                <div class="scroll-indicator">
+                    <div class="line"></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container my-5" id="landmarks">
-        <div class="row g-4">
-            
-            <div class="col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                    <div class="card-body p-4">
-                        <h3 class="shaniwar-wada mb-3">Shaniwar Wada</h3>
-                        <p class="text-muted small">The historic seat of the Peshwas of the Maratha Empire.</p>
-                        <button class="btn btn-danger w-100" onclick="alert('Shaniwar Wada: A 13-story palace fort of the Peshwas built in 1732.')">Show Info</button>
-                    </div>
+    <!-- Landmarks Section -->
+    <main id="landmarks" class="py-huge">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-heading">Heritage <br>Collection</h2>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                    <div class="card-body p-4">
-                        <h3 class="aga-khan mb-3">Aga Khan Palace</h3>
-                        <p class="text-muted small">Majestic Italian architecture and a monument of Indian history.</p>
-                        <button class="btn btn-primary w-100" onclick="alert('Aga Khan Palace: Built in 1892, this palace served as a prison for Gandhi.')">Show Info</button>
+            <div class="row g-0 landmark-row shadow-lg">
+                <!-- Sidebar Selection -->
+                <div class="col-lg-4 bg-white border-end">
+                    <div class="list-group list-group-flush" id="landmarkList">
+                        <button class="list-btn active" onclick="updateView(0)">
+                            <span class="num">01</span> Shaniwar Wada
+                        </button>
+                        <button class="list-btn" onclick="updateView(1)">
+                            <span class="num">02</span> Aga Khan Palace
+                        </button>
+                        <button class="list-btn" onclick="updateView(2)">
+                            <span class="num">03</span> Sinhagad Fort
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Area -->
+                <div class="col-lg-8 bg-white position-relative overflow-hidden">
+                    <div id="displayArea" class="content-view">
+                        <img id="mainImg"
+                            src="https://images.unsplash.com/photo-1596700683072-0692290f63b4?auto=format&fit=crop&w=1200&q=80"
+                            alt="Pune Heritage" class="img-fluid fade-in">
+                        <div class="p-5">
+                            <h3 id="mainTitle" class="fw-black mb-3">Shaniwar Wada</h3>
+                            <p id="mainDesc" class="text-muted leading-relaxed">The historical seat of the Peshwas, this
+                                18th-century fortification remains the symbolic heart of the city.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                    <div class="card-body p-4">
-                        <h3 class="sinhagad mb-3">Sinhagad Fort</h3>
-                        <p class="text-muted small">Famous hill fortress offering a stunning panoramic view.</p>
-                        <button class="btn btn-success w-100" onclick="alert('Sinhagad Fort: An ancient hill fortress popular for trekking and local cuisine.')">Show Info</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </main>
 
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-0">MyCity Pune Guide &copy; 2026 | Practical Assignment</p>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5">
+        <div class="container text-center">
+            <h2 class="playfair italic mb-4">Pune</h2>
+            <div class="footer-links mb-4">
+                <a href="#">History</a> &nbsp; / &nbsp; <a href="#">Culture</a> &nbsp; / &nbsp; <a href="#">Visit</a>
+            </div>
+            <p class="small opacity-50">© 2026 Archive Series: Pune City.</p>
         </div>
     </footer>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
