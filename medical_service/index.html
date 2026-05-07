@@ -1,104 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Medical Emergency Portal</title>
+    <title>MediSwift 24/7 | Medical Emergency Services</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <style>
-        /* Choose background colors and text colors as per need */
-        body { background-color: #fdfdfd; font-family: 'Segoe UI', sans-serif; }
-        .emergency-header { background-color: #dc3545; color: white; padding: 60px 0; }
-        
-        /* Service Cards Styling */
-        .service-card { 
-            border: none; 
-            border-top: 5px solid #dc3545; 
-            transition: 0.3s; 
-            background: #fff;
-        }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .service-icon { font-size: 3rem; color: #dc3545; margin-bottom: 15px; }
-
-        footer { background: #343a40; color: #ced4da; padding: 20px 0; }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-medical sticky-top shadow">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-plus-circle-fill me-2"></i>CityMed Response</a>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-plus-circle-fill text-danger"></i> MEDISWIFT 24/7
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Emergency Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Emergency Services</a></li>
+                    <li class="nav-item"><button class="btn btn-danger rounded-pill ms-lg-3 px-4 fw-bold"
+                            onclick="showContact()">CONTACT US</button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="emergency-header text-center">
+    <!-- Hero / Emergency Header -->
+    <header class="hero-header d-flex align-items-center" id="main-hero">
         <div class="container">
-            <h1 class="display-4 fw-bold text-uppercase">24/7 Medical Emergency Services</h1>
-            <p class="lead">Your safety and health are our top priorities in the city.</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="emergency-badge mb-3">Critical Response Unit</div>
+                    <h1 class="display-3 fw-bold text-white mb-4">Every Second <br><span
+                            class="text-danger">Counts.</span></h1>
+                    <p class="lead text-light mb-4">Providing the city's fastest emergency medical response, ambulance
+                        services, and trauma care. Available 365 days a year.</p>
+                    <div class="d-flex gap-3">
+                        <a href="tel:102" class="btn btn-danger btn-lg px-5 shadow-lg">CALL 102</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-4">View Services</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container my-5" id="services">
-        <h2 class="text-center mb-5">Our Critical Services</h2>
-        <div class="row g-4 text-center">
-            
-            <div class="col-md-4">
-                <div class="card service-card shadow-sm h-100 p-4">
-                    <div class="card-body">
-                        <i class="bi bi-truck-flatbed service-icon"></i>
-                        <h4 class="card-title">Ambulance</h4>
-                        <p class="text-muted">Swift and equipped emergency transport available 24/7 across the city.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card service-card shadow-sm h-100 p-4">
-                    <div class="card-body">
-                        <i class="bi bi-droplet-half service-icon"></i>
-                        <h4 class="card-title">Blood Bank</h4>
-                        <p class="text-muted">Immediate access to blood reserves and rare groups for urgent surgeries.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card service-card shadow-sm h-100 p-4">
-                    <div class="card-body">
-                        <i class="bi bi-hospital service-icon"></i>
-                        <h4 class="card-title">ICU Support</h4>
-                        <p class="text-muted">Advanced critical care units with specialized medical staff on standby.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="text-center mt-5" id="contact">
-            <button class="btn btn-danger btn-lg px-5 shadow" onclick="window.location.href='#'; alert('Redirecting to Contact Us page...')">
-                <i class="bi bi-telephone-outbound me-2"></i>Contact Us Now
-            </button>
-        </div>
-    </main>
-
-    <footer class="text-center">
+    <!-- Services Grid -->
+    <section id="services" class="py-5 bg-light">
         <div class="container">
-            <p class="mb-0">&copy; 2026 City Emergency Medical Portal | Emergency Toll-Free: 108</p>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Critical Services</h2>
+                <p class="text-muted">Advanced life support systems at your doorstep</p>
+            </div>
+            <div class="row g-4" id="services-container">
+                <!-- Services injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page Section (Hidden by default) -->
+    <section id="contact-section" class="py-5 d-none">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow-lg border-0 p-4 p-md-5">
+                        <h2 class="text-center fw-bold mb-4">Emergency Contact Portal</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Emergency Phone</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Nature of Emergency</label>
+                                <select class="form-select">
+                                    <option>Cardiac Arrest</option>
+                                    <option>Accident / Trauma</option>
+                                    <option>Maternity Emergency</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-medical w-100 py-3 fw-bold mt-3">REQUEST IMMEDIATE
+                                RESPONSE</button>
+                        </form>
+                        <button class="btn btn-link mt-3 text-muted w-100" onclick="hideContact()">Back to
+                            Services</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-medical text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">MEDISWIFT 24/7</h5>
+                    <p class="small opacity-75">Serving the city with pride. Our mission is to save lives through rapid
+                        response and advanced medical technology.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled opacity-75 small">
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Standard Operating Procedures</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Hospital Network</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">Command Centre</h5>
+                    <p class="small opacity-75 mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Medical HQ, Central Avenue
+                    </p>
+                    <p class="small opacity-75"><i class="bi bi-envelope-fill me-2"></i> emergency@mediswift.com</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center mb-0 small opacity-50">&copy; 2026 MediSwift Emergency Services. All rights reserved.
+            </p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

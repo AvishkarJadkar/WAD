@@ -1,0 +1,71 @@
+:root {
+    --medical-blue: #003049;
+    --emergency-red: #d62828;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.bg-medical {
+    background-color: var(--medical-blue) !important;
+}
+
+.btn-medical {
+    background-color: var(--medical-blue);
+    color: white;
+}
+
+.btn-medical:hover {
+    background-color: #001d2d;
+    color: white;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.hero-header {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 48, 73, 0.8), rgba(0, 48, 73, 0.5)),
+        url('https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.emergency-badge {
+    display: inline-block;
+    background: var(--emergency-red);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.service-card {
+    border: none;
+    border-bottom: 5px solid var(--medical-blue);
+    transition: 0.3s;
+    background: white;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--emergency-red);
+    margin-bottom: 1rem;
+}
+
+#contact-section .card {
+    border-radius: 20px;
+    border-top: 10px solid var(--emergency-red);
+}
