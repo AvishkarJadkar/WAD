@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Department Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .dept-box {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4A77C5;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .ui-block-a,
+        .ui-block-b,
+        .ui-block-c,
+        .ui-block-d,
+        .ui-block-e {
+            padding: 5px;
+        }
+
+        .info-btn {
+            background-color: #F28C38 !important;
+            color: white !important;
+            text-shadow: none !important;
+            border-radius: 8px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>Colleges Departments</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="ui-grid-d">
+                <div class="ui-block-a">
+                    <div class="dept-box">IT</div>
+                    <a href="#it-page" class="ui-btn info-btn">Button</a>
+                </div>
+
+                <div class="ui-block-b">
+                    <div class="dept-box">COMP</div>
+                    <a href="#comp-page" class="ui-btn info-btn">Button</a>
+                </div>
+
+                <div class="ui-block-c">
+                    <div class="dept-box">ETC</div>
+                    <a href="#etc-page" class="ui-btn info-btn">Button</a>
+                </div>
+
+                <div class="ui-block-d">
+                    <div class="dept-box">MECH</div>
+                    <a href="#mech-page" class="ui-btn info-btn">Button</a>
+                </div>
+
+                <div class="ui-block-e">
+                    <div class="dept-box">ELECT</div>
+                    <a href="#elect-page" class="ui-btn info-btn">Button</a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h4>HMS Portal &copy; 2026</h4>
+        </div>
+    </div>
+
+    <div data-role="page" id="it-page">
+        <div data-role="header">
+            <a href="#home" data-icon="back">Back</a>
+            <h1>Information Technology</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Department Details</h3>
+            <p>The IT department focuses on software development, networking, and data management.</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="comp-page">
+        <div data-role="header">
+            <a href="#home" data-icon="back">Back</a>
+            <h1>Computer Engineering</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Department Details</h3>
+            <p>Focuses on computer architecture, algorithms, and hardware-software integration.</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="etc-page">
+        <div data-role="header">
+            <a href="#home" data-icon="back">Back</a>
+            <h1>Electronics & Telecomm.</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Department Details</h3>
+            <p>Focuses on communication systems, signal processing, and embedded systems.</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="mech-page">
+        <div data-role="header">
+            <a href="#home" data-icon="back">Back</a>
+            <h1>Mechanical Engineering</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Department Details</h3>
+            <p>Focuses on thermodynamics, design, manufacturing, and robotics.</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="elect-page">
+        <div data-role="header">
+            <a href="#home" data-icon="back">Back</a>
+            <h1>Electrical Engineering</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Department Details</h3>
+            <p>Focuses on power systems, electrical machines, and control systems.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
