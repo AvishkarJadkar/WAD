@@ -1,0 +1,68 @@
+:root {
+    --primary-color: #6c63ff;
+    /* Modern Purple/Blue */
+    --accent-bg: #f0efff;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+.navbar-brand {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.hero-bg {
+    min-height: 70vh;
+    background-color: var(--accent-bg);
+    padding: 60px 0;
+}
+
+.hero-img {
+    border: 10px solid white;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #554edb;
+}
+
+#contact-page {
+    min-height: 80vh;
+}
