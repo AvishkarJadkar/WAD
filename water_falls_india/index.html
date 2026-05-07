@@ -1,119 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cascades of India</title>
+    <title>JalaPrapata | Waterfalls of India</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <style>
-        /* Choose background colors and text colors as per need */
-        body { background-color: #f0f4f8; color: #2d3436; font-family: 'Segoe UI', sans-serif; }
-        
-        .navbar { background-color: #004d40 !important; }
-        
-        /* Appropriate header with Pune Skyline or nature theme */
-        .hero-section { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000&auto=format&fit=crop'); 
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 100px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .waterfall-card { border: none; border-radius: 15px; overflow: hidden; transition: 0.3s; }
-        .waterfall-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-        .card-img-top { height: 250px; object-fit: cover; }
-
-        /* Appropriate footer */
-        footer { background: #1b1b1b; color: #ced4da; padding: 25px 0; margin-top: 50px; }
-    </style>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-aqua shadow sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-water me-2"></i>AquaIndia</a>
+            <a class="navbar-brand fw-bold" href="#">JALA<span>PRAPATA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#explore">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3" href="#footer">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
+    <!-- Header / Hero Section -->
+    <header class="hero-header d-flex align-items-center text-white text-center">
         <div class="container">
-            <h1 class="display-2 fw-bold">WATERFALLS IN INDIA</h1>
-            <p class="lead fs-3">Nature's majestic cascades, from the Western Ghats to the Himalayas.</p>
+            <h1 class="display-2 fw-bold mb-3">Majestic Waterfalls of India</h1>
+            <p class="lead">Discover the thunderous beauty of India's natural cascades.</p>
         </div>
     </header>
 
-    <main class="container my-5" id="explore">
-        <h2 class="text-center mb-5 fw-light">Popular Destinations</h2>
-        <div class="row g-4">
-            
-            <div class="col-md-4">
-                <div class="card waterfall-card shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1589133036683-16279313264c?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dudhsagar">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold">Dudhsagar Falls</h4>
-                        <p class="text-muted small">Located on the Mandovi River, this "Sea of Milk" is one of India's tallest falls.</p>
-                        <button class="btn btn-primary w-100 mt-2" onclick="showInfo('Dudhsagar', 'Access via Jeep Safari from Kulem or Mollem National Park.')">
-                            <i class="bi bi-geo-alt me-1"></i> How to Reach
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card waterfall-card shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1634584286134-2e94711316f7?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Jog Falls">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold">Jog Falls</h4>
-                        <p class="text-muted small">The second-highest plunge waterfall in India, located in Sagara, Karnataka.</p>
-                        <button class="btn btn-primary w-100 mt-2" onclick="showInfo('Jog Falls', 'Connected by road from Shimoga; nearest railhead is Talguppa.')">
-                            <i class="bi bi-geo-alt me-1"></i> How to Reach
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card waterfall-card shadow-sm h-100">
-                    <img src="https://images.unsplash.com/photo-1624522923985-056340f1a91e?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Nohkalikai">
-                    <div class="card-body p-4">
-                        <h4 class="fw-bold">Nohkalikai Falls</h4>
-                        <p class="text-muted small">The tallest plunge waterfall in India, located near Cherrapunji, Meghalaya.</p>
-                        <button class="btn btn-primary w-100 mt-2" onclick="showInfo('Nohkalikai', 'Located 5km from Cherrapunji; reach via taxi from Shillong.')">
-                            <i class="bi bi-geo-alt me-1"></i> How to Reach
-                        </button>
-                    </div>
-                </div>
-            </div>
-
+    <!-- Content Section -->
+    <main class="container py-5" id="explore">
+        <div class="row g-4" id="falls-container">
+            <!-- Dynamic Cards via JS -->
         </div>
     </main>
 
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Waterfalls of India Portal | Academic Project</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5" id="footer">
+        <div class="container text-center">
+            <h4 class="mb-4">Nature's Wonder</h4>
+            <p class="text-muted">Explore India, Save Water, Protect Nature.</p>
+            <div class="mt-4">
+                <p>&copy; 2026 JalaPrapata Travel. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        function showInfo(name, route) {
-            alert(name + " - How to reach:\n" + route);
-        }
-    </script>
+    <!-- Reach Modal -->
+    <div class="modal fade" id="reachModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-aqua text-white">
+                    <h5 class="modal-title" id="modalTitle">How to Reach</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Directions injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
