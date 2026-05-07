@@ -1,138 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Insights Dashboard</title>
+    <title>CorpVision | Interactive Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
-        
-        /* Navbar Styling */
-        .navbar { background-color: #002d5b; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: 700; letter-spacing: 1px; }
-
-        /* Search Box Styling */
-        .search-wrapper { position: relative; max-width: 400px; width: 100%; }
-        .search-input { border-radius: 20px; padding-left: 40px; border: 1px solid #ddd; }
-        .search-icon { position: absolute; left: 15px; top: 8px; color: #888; }
-
-        /* Dashboard Cards */
-        .card { border: none; border-radius: 10px; transition: 0.3s; }
-        .card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .sidebar { background: white; min-height: calc(100vh - 56px); border-right: 1px solid #eee; }
-        .nav-link { color: #555; padding: 12px 20px; font-weight: 500; }
-        .nav-link:hover { background: #f0f7ff; color: #002d5b; }
-        .status-indicator { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand" href="#"><i class="bi bi-building-fill me-2"></i>CORP-X</a>
-            
-            <div class="search-wrapper mx-auto d-none d-md-block">
-                <i class="bi bi-search search-icon"></i>
-                <input type="text" class="form-control search-input" placeholder="Search reports, employees, or projects...">
-            </div>
-
-            <div class="d-flex align-items-center text-white">
-                <i class="bi bi-bell me-3 fs-5"></i>
-                <div class="dropdown">
-                    <a class="text-white text-decoration-none dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        Admin User
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                    </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold px-3" href="#"><i class="bi bi-layers-half me-2"></i>CORPVISION</a>
+            <form class="d-flex ms-auto me-3 d-none d-md-flex">
+                <div class="input-group">
+                    <span class="input-group-text bg-secondary border-secondary text-white"><i
+                            class="bi bi-search"></i></span>
+                    <input class="form-control bg-secondary text-white border-secondary shadow-none" type="search"
+                        placeholder="Search operations...">
                 </div>
+            </form>
+            <div class="dropdown me-3">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=0D6EFD&color=fff" width="32"
+                        height="32" class="rounded-circle me-2">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger" href="#">Sign out</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-2 d-none d-md-block sidebar px-0">
-                <div class="py-3">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse shadow-sm">
+                <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-pie-chart me-2"></i> Analytics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people me-2"></i> HR Management</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-briefcase me-2"></i> Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cash-stack me-2"></i> Financials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-file-earmark-text me-2"></i> Reports</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door me-2"></i>
+                                Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i
+                                    class="bi bi-file-earmark-bar-graph me-2"></i> Reports</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-people me-2"></i>
+                                Employees</a></li>
                     </ul>
                 </div>
             </nav>
 
-            <main class="col-md-10 ms-sm-auto px-md-4 py-4">
-                <h2 class="h4 mb-4">Enterprise Overview</h2>
-
-                <div class="row g-4 mb-4">
-                    <div class="col-md-3">
-                        <div class="card shadow-sm p-3">
-                            <div class="text-muted small">Revenue (Q1)</div>
-                            <div class="h3 fw-bold mt-1 text-success">$2.4M</div>
-                            <div class="small text-success"><i class="bi bi-arrow-up"></i> 12% from last year</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow-sm p-3">
-                            <div class="text-muted small">Active Projects</div>
-                            <div class="h3 fw-bold mt-1 text-primary">18</div>
-                            <div class="small text-muted">4 nearing deadline</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow-sm p-3">
-                            <div class="text-muted small">Total Employees</div>
-                            <div class="h3 fw-bold mt-1 text-dark">342</div>
-                            <div class="small text-primary">2 new hires today</div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow-sm p-3">
-                            <div class="text-muted small">Efficiency Rate</div>
-                            <div class="h3 fw-bold mt-1 text-warning">89%</div>
-                            <div class="small text-danger"><i class="bi bi-arrow-down"></i> 2% this week</div>
-                        </div>
-                    </div>
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Company Overview</h1>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEntryModal">
+                        <i class="bi bi-plus-lg"></i> Add Entry
+                    </button>
                 </div>
 
-                <div class="card shadow-sm">
+                <div class="row g-4 mb-4" id="kpi-container"></div>
+
+                <div class="card border-0 shadow-sm rounded-3">
                     <div class="card-header bg-white py-3">
-                        <h5 class="mb-0">Key Project Status</h5>
+                        <h5 class="mb-0 fw-bold">Recent Operations</h5>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover align-middle mb-0">
-                            <thead class="table-light">
+                            <thead class="bg-light">
                                 <tr>
-                                    <th>Project Name</th>
-                                    <th>Lead</th>
-                                    <th>Deadline</th>
+                                    <th>ID</th>
+                                    <th>Client</th>
+                                    <th>Date</th>
                                     <th>Status</th>
-                                    <th>Completion</th>
+                                    <th>Value</th>
+                                    <th class="text-end">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cloud Migration</td>
-                                    <td>Anjali R.</td>
-                                    <td>May 25, 2026</td>
-                                    <td><span class="status-indicator bg-success"></span> Active</td>
-                                    <td><div class="progress" style="height: 6px;"><div class="progress-bar" style="width: 75%"></div></div></td>
-                                </tr>
-                                <tr>
-                                    <td>Security Audit</td>
-                                    <td>Vikram S.</td>
-                                    <td>Jun 02, 2026</td>
-                                    <td><span class="status-indicator bg-warning"></span> Pending</td>
-                                    <td><div class="progress" style="height: 6px;"><div class="progress-bar bg-warning" style="width: 40%"></div></div></td>
-                                </tr>
-                            </tbody>
+                            <tbody id="table-body"></tbody>
                         </table>
                     </div>
                 </div>
@@ -140,6 +93,39 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="addEntryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="addEntryForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title">New Entry</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3"><label class="form-label">Client</label><input type="text" id="clientName"
+                                class="form-control" required></div>
+                        <div class="mb-3"><label class="form-label">Value ($)</label><input type="number" id="opValue"
+                                class="form-control" required></div>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select id="opStatus" class="form-select">
+                                <option value="Pending">Pending</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary w-100">Save Entry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

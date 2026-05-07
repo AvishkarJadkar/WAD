@@ -1,0 +1,41 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    height: calc(100vh - 56px);
+    z-index: 100;
+    background: #fff;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #495057;
+    padding: 0.8rem 1.5rem;
+}
+
+.sidebar .nav-link.active {
+    color: #0d6efd;
+    background-color: #f0f7ff;
+    border-right: 4px solid #0d6efd;
+}
+
+.kpi-card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
