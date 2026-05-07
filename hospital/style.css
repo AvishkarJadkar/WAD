@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+}
+
+.counter-card {
+    border-top: 4px solid #0d6efd;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+.new-row-animation {
+    animation: highlight 1.5s ease-out;
+}
+
+@keyframes highlight {
+    from {
+        background-color: #e7f1ff;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
