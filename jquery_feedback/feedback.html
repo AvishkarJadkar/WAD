@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .ui-content {
+            background-color: #f9f9f9;
+        }
+
+        .form-container {
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-btn {
+            background-color: #2ECC71 !important;
+            color: white !important;
+            text-shadow: none !important;
+            margin-top: 20px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-role="page" id="feedback-page">
+        <div data-role="header" data-theme="b">
+            <h1>Customer Feedback</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="form-container">
+                <form id="feedbackForm">
+
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+
+                    <hr>
+
+                    <label for="service-switch">Was the service fast?</label>
+                    <input type="checkbox" id="service-switch" data-role="flipswitch" data-on-text="Yes"
+                        data-off-text="No">
+
+                    <label for="recommend-switch">Would you recommend us?</label>
+                    <input type="checkbox" id="recommend-switch" data-role="flipswitch" data-on-text="Sure"
+                        data-off-text="Never">
+
+                    <label for="comments">Additional Comments:</label>
+                    <textarea name="comments" id="comments"></textarea>
+
+                    <button type="submit" class="ui-btn ui-corner-all submit-btn">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Support Team 2026</h4>
+        </div>
+    </div>
+
+    <script>
+        $(document).on("submit", "#feedbackForm", function (e) {
+            e.preventDefault();
+
+            // Checking the state of the Flipswitches
+            var service = $("#service-switch").is(":checked") ? "Yes" : "No";
+            var recommend = $("#recommend-switch").is(":checked") ? "Sure" : "Never";
+
+            alert("Feedback Received!\nService Fast: " + service + "\nRecommend: " + recommend);
+
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
