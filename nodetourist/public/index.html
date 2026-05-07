@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible India | Tourist Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Incredible India</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Explore Majestic Destinations</h1>
+
+        <!-- Bootstrap Carousel -->
+        <div id="touristCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#touristCarousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner rounded">
+                <!-- Place 1 -->
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&h=500"
+                        class="d-block w-100" alt="Taj Mahal">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-6">Taj Mahal, Agra</h2>
+                        <p>A symbol of eternal love and a UNESCO World Heritage site.</p>
+                    </div>
+                </div>
+                <!-- Place 2 -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1561414927-6d86591d0c4f?auto=format&fit=crop&w=1200&h=500"
+                        class="d-block w-100" alt="Varanasi">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-6">Varanasi, Uttar Pradesh</h2>
+                        <p>The spiritual capital of India on the banks of the Ganges.</p>
+                    </div>
+                </div>
+                <!-- Place 3 -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&h=500"
+                        class="d-block w-100" alt="Jaipur">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-6">Jaipur, Rajasthan</h2>
+                        <p>The "Pink City" known for its magnificent palaces and forts.</p>
+                    </div>
+                </div>
+                <!-- Place 4 -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&h=500"
+                        class="d-block w-100" alt="Kerala">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-6">Munnar, Kerala</h2>
+                        <p>Experience "God's Own Country" through its lush tea plantations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#touristCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#touristCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <section class="mt-5">
+            <h3 class="border-bottom pb-2">Plan Your Trip</h3>
+            <p>India offers a diverse range of experiences from the snow-capped Himalayas to the tropical beaches of the
+                south. Whether you seek spirituality, history, or adventure, India has a destination for you.</p>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
