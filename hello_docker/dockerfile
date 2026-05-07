@@ -1,0 +1,3 @@
+FROM node:alpine
+COPY . /wad_prac
+CMD ["node", "/wad_prac/server.js"] 
