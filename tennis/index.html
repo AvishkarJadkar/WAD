@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TennisHub | All About Tennis</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning fw-bold" href="#">TENNIS<span>HUB</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#players">Legendary Players</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Grand Slam Schedule</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-2 fw-bold">The Spirit of the Court</h1>
+            <p class="lead">Explore the legends, the rules, and the glory of Tennis.</p>
+        </div>
+    </header>
+
+    <!-- Legendary Players Section -->
+    <section id="players" class="container my-5">
+        <h2 class="text-center mb-5 section-title">Legendary Players</h2>
+        <div class="row g-4" id="player-grid">
+            <!-- JavaScript will inject player cards here -->
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title">Fundamental Rules</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group shadow-sm">
+                        <li class="list-group-item"><strong>Scoring:</strong> Points follow 0, 15, 30, 40, and Game.
+                        </li>
+                        <li class="list-group-item"><strong>Deuce:</strong> When both players reach 40-40, two
+                            consecutive points are needed to win.</li>
+                        <li class="list-group-item"><strong>In/Out:</strong> If the ball hits any part of the line, it
+                            is considered "in".</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group shadow-sm">
+                        <li class="list-group-item"><strong>Service:</strong> The server must stand behind the baseline
+                            and serve diagonally.</li>
+                        <li class="list-group-item"><strong>Sets:</strong> Usually, men play best of 5 sets in Slams,
+                            while women play best of 3.</li>
+                        <li class="list-group-item"><strong>Let:</strong> If a serve hits the net but lands in the box,
+                            it is replayed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grand Slam Schedule Section -->
+    <section id="schedule" class="container my-5">
+        <h2 class="text-center mb-4 section-title">2026 Grand Slam Schedule</h2>
+        <div class="table-responsive">
+            <table class="table table-hover shadow-sm">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Tournament</th>
+                        <th>Location</th>
+                        <th>Surface</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Australian Open</td>
+                        <td>Melbourne</td>
+                        <td>Hard</td>
+                        <td>January</td>
+                    </tr>
+                    <tr>
+                        <td>French Open</td>
+                        <td>Paris</td>
+                        <td>Clay</td>
+                        <td>May - June</td>
+                    </tr>
+                    <tr>
+                        <td>Wimbledon</td>
+                        <td>London</td>
+                        <td>Grass</td>
+                        <td>July</td>
+                    </tr>
+                    <tr>
+                        <td>US Open</td>
+                        <td>New York</td>
+                        <td>Hard</td>
+                        <td>August - September</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 TennisHub. Dedicated to the Game.</p>
+            <small class="text-muted">Designed with Bootstrap & Passion.</small>
+        </div>
+    </footer>
+
+    <!-- Achievement Modal -->
+    <div class="modal fade" id="achievementModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPlayerName">Achievements</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Achievements injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
